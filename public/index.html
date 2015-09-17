@@ -1,0 +1,104 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>:::Agenda Personal:::</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="stylecss.css">
+	</head>
+	<body>
+		<h3 class="text-center bg-primary">AGENDA PERSONAL</h3>
+		<div id="agregar">
+			<button type="button" class="agregar btn btn-primary btn" data-toggle="modal" data-target="#myModalAgregar">Agregar Contacto</button>
+		</div>
+		<div class="col-md-10 col-md-offset-1">
+			<table class="table table-striped">
+				<thead>	
+					<tr>
+						<th>Nombre y Apellido</th>
+						<th>Numero</th>
+						<th>Modificar</th>
+						<th>Borrar</th>
+					</tr>
+				</thead>
+				<tbody id="listaContactos">
+					<!--<tr>
+						<td>Martin Zarate</td>
+						<td>01147251336</td>
+						<td><button type="button" class="modificar btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalModificar">Modify</button></td>
+						<td><button type="button" class="borrar btn btn-primary btn-sm">Delete</button></td>
+					</tr>
+					<tr>
+						<td>Carlos Santos</td>
+						<td>01147631289</td>
+						<td><button type="button" class="modificar btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalModificar">Modify</button></td>
+						<td><button type="button" class="borrar btn btn-primary btn-sm">Delete</button></td>
+					</tr>
+					<tr>
+						<td>Mariela Carranzo</td>
+						<td>01147435678</td>
+						<td><button type="button" class="modificar btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalModificar">Modify</button></td>
+						<td><button type="button" class="borrar btn btn-primary btn-sm">Delete</button></td>
+					</tr>
+					<tr>
+						<td>Pepe Sarlanga</td>
+						<td>01122457634</td>
+						<td><button type="button" class="modificar btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalModificar">Modify</button></td>
+						<td><button type="button" class="borrar btn btn-primary btn-sm">Delete</button></td>
+					</tr>-->
+				</tbody>
+			</table>
+		</div>
+		<!--Modal de Agregar Contacto-->
+		<div class="modal fade" id="myModalAgregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+     				<div class="modal-header">
+      					  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        				  <h4 class="modal-title" id="myModalLabel">Agregar Contacto</h4>
+     				</div>
+     				<div class="modal-body">
+     				 	<div class="form-group">
+   							<label for="nuevoContactoInput">Nombre y Apellido</label>
+    						<input type="text" class="form-control" id="nuevoContactoInput" placeholder="Nombre y Apellido">
+  						</div>
+     				 	<div class="form-group">
+   							<label for="nuevoTelefonoInput">Telefono</label>
+    						<input type="tel" class="form-control" id="nuevoTelefonoInput" placeholder="(15)-XXXX-XXXX">
+  						</div>
+     				</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      					<button id="agregarbtn" type="button" class="btn btn-primary">Agregar Contacto</button>
+     				</div>
+    			</div>
+  			</div>
+		</div>
+		<!--Modal de Modificar-->
+		<div class="modal fade" id="myModalModificar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+      				<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        				<h4 class="modal-title" id="myModalLabel">Modificar Contacto</h4>
+      				</div>
+      				<div class="modal-body">
+      					<div class="form-group">
+   							<label for="modificarContactoInput">Nombre y Apellido</label>
+    						<input type="text" class="form-control" id="modificarContactoInput" placeholder="Nombre y Apellido">
+  						</div>
+     				 	<div class="form-group">
+   							<label for="modificarTelefonoInput">Telefono</label>
+    						<input type="tel" class="form-control" id="modificarTelefonoInput" placeholder="(15)-XXXX-XXXX">
+      					</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        				<button id="modificarbtn" type="button" class="btn btn-primary">Modificar Contacto</button>
+      				</div>
+    			</div>
+  			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>
