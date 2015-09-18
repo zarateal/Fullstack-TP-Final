@@ -1,10 +1,10 @@
 var moduloConsultas = {
 
-	agregarContacto: function(db, callback, nombre, telefono){
+	agregarContacto: function(db, callback, nombreadd, telefonoadd){
 		var cargarContacto = db.collection('datos');
 		cargarContacto.insert({
-			"Nombre": nombre,
-			"Telefono": telefono
+			"Nombre": nombreadd,
+			"Telefono": telefonoadd
 		}, function(err, result){
 			if(err){
 				console.log(err);

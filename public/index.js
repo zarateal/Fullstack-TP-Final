@@ -6,7 +6,6 @@ $(document).ready(function(){
 	agregarbtn.on('click', function(){
 	var nuevoContactoInput = $('#nuevoContactoInput').val();
 	var nuevoTelefonoInput = $('#nuevoTelefonoInput').val();
-		/*console.log(nuevoContactoInput+" "+nuevoTelefonoInput);*/
 
 	if(nuevoContactoInput==="" && nuevoTelefonoInput!=""){
 		alert("Nombre Vacio");
@@ -51,7 +50,7 @@ $(document).ready(function(){
 			});
 		},
 		error: function(data){
-			console.log("error"+data);
+			console.log("Error"+data);
 		}
 	});
 
@@ -68,9 +67,13 @@ $(document).ready(function(){
 				nombreModidy: modificarContactoInput,
 				teledonoModify: modificarTelefonoInput},
 			success: function(data){
-
+				console.log("Se Modifico correctamente el contacto"+data);
+				location.reload();
 			},
-			});
+			error: function(data){
+				console.log("Error"+data);
+			}
+		});
 	});
 
 });
